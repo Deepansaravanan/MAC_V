@@ -1,0 +1,7 @@
+{
+  "name": "fixed_int8_baseline",
+  "status": "placeholder",
+  "precision": "int8",
+  "notes": "Populate only with reproducible implementation settings."
+}
+

@@ -1,0 +1,28 @@
+# Vivado generated artifacts
+.cache/
+.hw/
+.ip_user_files/
+.sim/
+runs/
+*.jou
+*.log
+*.str
+*.wdb
+*.Xil/
+*.xpr
+*.gen/
+*.runs/
+*.sdk/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+

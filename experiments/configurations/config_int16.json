@@ -1,0 +1,7 @@
+{
+  "name": "fixed_int16_baseline",
+  "status": "placeholder",
+  "precision": "int16",
+  "notes": "Populate only with reproducible implementation settings."
+}
+
