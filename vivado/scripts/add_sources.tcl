@@ -1,9 +1,7 @@
-# Vivado automation placeholder. Set TARGET_PART before running this flow.
-if {![info exists TARGET_PART] || $TARGET_PART eq ""} { set TARGET_PART "" }
-# Run from vivado/scripts after create_project.tcl.
-# TODO: Add RTL, testbench, and XDC sources explicitly as RTL is implemented.
-add_files -norecurse [glob -nocomplain ../../rtl/**/*.sv]
-add_files -fileset sim_1 -norecurse [glob -nocomplain ../../tb/**/*.sv]
-add_files -fileset constrs_1 -norecurse [glob -nocomplain ../constraints/*.xdc]
-set_property top reconfigurable_mac_top [current_fileset]
-
+set script_dir [file dirname [file normalize [info script]]]
+set repo_root [file normalize [file join $script_dir .. ..]]
+add_files -norecurse [glob -nocomplain [file join $repo_root rtl * *.sv]]
+add_files -fileset sim_1 -norecurse [glob -nocomplain [file join $repo_root tb * *.sv]]
+add_files -fileset constrs_1 -norecurse [glob -nocomplain [file join $repo_root vivado constraints *.xdc]]
+set_property top $TOP_MODULE [current_fileset]
+set_property top int8_mac_tb [get_filesets sim_1]

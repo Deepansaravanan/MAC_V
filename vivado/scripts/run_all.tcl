@@ -1,8 +1,6 @@
-# Intended orchestration order for a configured Vivado project.
-source create_project.tcl
-source add_sources.tcl
-# source run_simulation.tcl
-# source run_synthesis.tcl
-# source run_implementation.tcl
-# source generate_reports.tcl
-
+set script_dir [file dirname [file normalize [info script]]]
+source [file join $script_dir create_project.tcl]
+source [file join $script_dir add_sources.tcl]
+source [file join $script_dir run_synthesis.tcl]
+source [file join $script_dir run_implementation.tcl]
+source [file join $script_dir generate_reports.tcl]

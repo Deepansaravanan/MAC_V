@@ -18,6 +18,10 @@ runs/
 __pycache__/
 *.py[cod]
 .venv/
+.tools/
+
+# Local simulation build products (CSV verification artifacts are retained)
+verification/*.vvp
 
 # VS Code
 .vscode/
@@ -25,4 +29,3 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
-
