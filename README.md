@@ -29,6 +29,23 @@ SystemVerilog, Xilinx Vivado and TCL are used for RTL development and FPGA flows
 
 Vivado TCL scripts are structured to add RTL and testbench files, simulate, synthesize, implement, and emit reports once a target part and implementation are supplied. No generated results are included in this initial skeleton.
 
+## M9 — Vivado measurement flow
+
+The FPGA part is mandatory; `xc7a35tcpg236-1` below is an example, not a
+silently selected board. Start with the single-top debug flow, then run all five:
+
+```powershell
+.\vivado\scripts\check_vivado.ps1
+.\vivado\scripts\run_m9.ps1 -FpgaPart "xc7a35tcpg236-1" -Top mac_int8
+.\vivado\scripts\run_m9.ps1 -FpgaPart "xc7a35tcpg236-1"
+```
+
+Override the common 10 ns constraint with `-ClockPeriodNs`. Reports are written
+under `results/vivado/<top>/`; parsed comparisons go to `results/*.csv`, and
+plots are created only when real values exist. See
+[`docs/m9_vivado_results.md`](docs/m9_vivado_results.md) for metric definitions,
+Fmax derivation, limitations, and current status.
+
 ## Evaluation metrics
 
 Planned evaluation covers LUT, FF, DSP and BRAM use; maximum frequency, critical path and latency; dynamic, static and total power; energy per MAC; throughput; and derived efficiency metrics.
@@ -79,7 +96,7 @@ VCD output. With Vivado configured, source `create_project.tcl`,
 - M6 Reconfiguration Verification ✅
 - M7 Pipelined/Operand-Isolated Variant ✅ (functional only; PPA unmeasured)
 - M8 Four-Lane Edge-AI Dot Product ✅
-- M9 Vivado Measurement Flow prepared; execution pending Vivado and target part
+- M9 Vivado Measurement Flow ✅ (Vivado 2025.2, `xc7a35tcpg236-1`, OOC, 10 ns)
 - M10 paper structure present; measured-results sections pending M9
 
 ## Future work

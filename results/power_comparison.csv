@@ -1,0 +1,6 @@
+architecture,dynamic_power_w,static_power_w,total_power_w
+mac_int8,0.001,0.068,0.07
+mac_int16,0.001,0.068,0.07
+reconfigurable_mac_top,0.001,0.068,0.07
+reconfigurable_mac_optimized,0.001,0.068,0.07
+mac_array_4lane,0.009,0.068,0.077

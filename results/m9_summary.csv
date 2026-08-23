@@ -1,0 +1,6 @@
+architecture,fpga_part,clock_period_ns,lut,ff,dsp,bram,wns_ns,tns_ns,data_path_delay_ns,estimated_fmax_mhz,dynamic_power_w,static_power_w,total_power_w,latency_cycles,macs_per_cycle,throughput_macs_per_second,flow
+mac_int8,xc7a35tcpg236-1,10,95,33,0,0,7.175,0,2.803,353.982301,0.001,0.068,0.07,1,1,353982300.884956,PASS
+mac_int16,xc7a35tcpg236-1,10,3,1,1,0,,,1.429,,0.001,0.068,0.07,1,1,,PASS
+reconfigurable_mac_top,xc7a35tcpg236-1,10,19,1,1,0,,,1.491,,0.001,0.068,0.07,1,1,,PASS
+reconfigurable_mac_optimized,xc7a35tcpg236-1,10,11,2,1,0,8.396,0,1.638,623.441397,0.001,0.068,0.07,2,1,623441396.508729,PASS
+mac_array_4lane,xc7a35tcpg236-1,10,163,49,4,0,4.624,0,5.401,186.011905,0.009,0.068,0.077,1,4,744047619.047619,PASS

@@ -1,0 +1,11 @@
+architecture=reconfigurable_mac_optimized
+fpga_part=xc7a35tcpg236-1
+clock_period_ns=10
+vivado_version=2025.2
+synthesis=NOT_RUN
+implementation=NOT_RUN
+synthesis_status=synth_design Complete!
+synthesis=PASS
+implementation_status=route_design Complete!
+implementation=PASS
+flow=PASS

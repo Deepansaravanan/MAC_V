@@ -1,0 +1,333 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Aug 23 19:07:36 2026
+| Host         : Deepan running 64-bit major release  (build 9200)
+| Command      : report_timing -delay_type max -max_paths 10 -path_type full -file C:/Users/Deepan08/Desktop/MAC_V/results/vivado/mac_int16/critical_paths.rpt
+| Design       : mac_int16
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 rst_n
+                            (input port)
+  Destination:            acc_out_reg/RSTP
+                            (rising edge-triggered cell DSP48E1 clocked by system_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        1.729ns  (logic 0.124ns (7.171%)  route 1.605ns (92.829%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.924ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  rst_n (IN)
+                         net (fo=1, unset)            0.973     0.973    rst_n
+    SLICE_X54Y70         LUT2 (Prop_lut2_I1_O)        0.124     1.097 r  acc_out_reg_i_2/O
+                         net (fo=1, routed)           0.632     1.729    RSTP
+    DSP48_X1Y28          DSP48E1                                      r  acc_out_reg/RSTP
+  -------------------------------------------------------------------    -------------------
+
+                         (clock system_clk rise edge)
+                                                      0.000     0.000 r  
+                         propagated clock network latency
+                                                      0.924     0.924    
+
+Slack:                    inf
+  Source:                 valid_in
+                            (input port)
+  Destination:            acc_out_reg/CEP
+                            (rising edge-triggered cell DSP48E1 clocked by system_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        1.381ns  (logic 0.124ns (8.976%)  route 1.257ns (91.024%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.924ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  valid_in (IN)
+                         net (fo=1, unset)            0.973     0.973    valid_in
+    SLICE_X54Y72         LUT2 (Prop_lut2_I1_O)        0.124     1.097 r  acc_out_reg_i_1/O
+                         net (fo=1, routed)           0.284     1.381    acc_out_reg_i_1_n_0
+    DSP48_X1Y28          DSP48E1                                      r  acc_out_reg/CEP
+  -------------------------------------------------------------------    -------------------
+
+                         (clock system_clk rise edge)
+                                                      0.000     0.000 r  
+                         propagated clock network latency
+                                                      0.924     0.924    
+
+Slack:                    inf
+  Source:                 clear_acc
+                            (input port)
+  Destination:            valid_out_reg/D
+                            (rising edge-triggered cell FDRE clocked by system_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        1.097ns  (logic 0.124ns (11.304%)  route 0.973ns (88.696%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.924ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  clear_acc (IN)
+                         net (fo=1, unset)            0.973     0.973    clear_acc
+    SLICE_X36Y75         LUT4 (Prop_lut4_I3_O)        0.124     1.097 r  valid_out_i_1/O
+                         net (fo=1, routed)           0.000     1.097    valid_out_i_1_n_0
+    SLICE_X36Y75         FDRE                                         r  valid_out_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock system_clk rise edge)
+                                                      0.000     0.000 r  
+                         propagated clock network latency
+                                                      0.924     0.924    
+
+Slack:                    inf
+  Source:                 a[0]
+                            (input port)
+  Destination:            acc_out_reg/A[0]
+                            (rising edge-triggered cell DSP48E1 clocked by system_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        0.973ns  (logic 0.000ns (0.000%)  route 0.973ns (100.000%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.924ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[0] (IN)
+                         net (fo=0)                   0.973     0.973    a[0]
+    DSP48_X1Y28          DSP48E1                                      r  acc_out_reg/A[0]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock system_clk rise edge)
+                                                      0.000     0.000 r  
+                         propagated clock network latency
+                                                      0.924     0.924    
+
+Slack:                    inf
+  Source:                 a[10]
+                            (input port)
+  Destination:            acc_out_reg/A[10]
+                            (rising edge-triggered cell DSP48E1 clocked by system_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        0.973ns  (logic 0.000ns (0.000%)  route 0.973ns (100.000%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.924ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[10] (IN)
+                         net (fo=0)                   0.973     0.973    a[10]
+    DSP48_X1Y28          DSP48E1                                      r  acc_out_reg/A[10]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock system_clk rise edge)
+                                                      0.000     0.000 r  
+                         propagated clock network latency
+                                                      0.924     0.924    
+
+Slack:                    inf
+  Source:                 a[11]
+                            (input port)
+  Destination:            acc_out_reg/A[11]
+                            (rising edge-triggered cell DSP48E1 clocked by system_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        0.973ns  (logic 0.000ns (0.000%)  route 0.973ns (100.000%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.924ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[11] (IN)
+                         net (fo=0)                   0.973     0.973    a[11]
+    DSP48_X1Y28          DSP48E1                                      r  acc_out_reg/A[11]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock system_clk rise edge)
+                                                      0.000     0.000 r  
+                         propagated clock network latency
+                                                      0.924     0.924    
+
+Slack:                    inf
+  Source:                 a[12]
+                            (input port)
+  Destination:            acc_out_reg/A[12]
+                            (rising edge-triggered cell DSP48E1 clocked by system_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        0.973ns  (logic 0.000ns (0.000%)  route 0.973ns (100.000%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.924ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[12] (IN)
+                         net (fo=0)                   0.973     0.973    a[12]
+    DSP48_X1Y28          DSP48E1                                      r  acc_out_reg/A[12]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock system_clk rise edge)
+                                                      0.000     0.000 r  
+                         propagated clock network latency
+                                                      0.924     0.924    
+
+Slack:                    inf
+  Source:                 a[13]
+                            (input port)
+  Destination:            acc_out_reg/A[13]
+                            (rising edge-triggered cell DSP48E1 clocked by system_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        0.973ns  (logic 0.000ns (0.000%)  route 0.973ns (100.000%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.924ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[13] (IN)
+                         net (fo=0)                   0.973     0.973    a[13]
+    DSP48_X1Y28          DSP48E1                                      r  acc_out_reg/A[13]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock system_clk rise edge)
+                                                      0.000     0.000 r  
+                         propagated clock network latency
+                                                      0.924     0.924    
+
+Slack:                    inf
+  Source:                 a[14]
+                            (input port)
+  Destination:            acc_out_reg/A[14]
+                            (rising edge-triggered cell DSP48E1 clocked by system_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        0.973ns  (logic 0.000ns (0.000%)  route 0.973ns (100.000%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.924ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[14] (IN)
+                         net (fo=0)                   0.973     0.973    a[14]
+    DSP48_X1Y28          DSP48E1                                      r  acc_out_reg/A[14]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock system_clk rise edge)
+                                                      0.000     0.000 r  
+                         propagated clock network latency
+                                                      0.924     0.924    
+
+Slack:                    inf
+  Source:                 a[15]
+                            (input port)
+  Destination:            acc_out_reg/A[15]
+                            (rising edge-triggered cell DSP48E1 clocked by system_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        0.973ns  (logic 0.000ns (0.000%)  route 0.973ns (100.000%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.924ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[15] (IN)
+                         net (fo=14, unset)           0.973     0.973    a[15]
+    DSP48_X1Y28          DSP48E1                                      r  acc_out_reg/A[15]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock system_clk rise edge)
+                                                      0.000     0.000 r  
+                         propagated clock network latency
+                                                      0.924     0.924    
+
+
+
+

@@ -1,0 +1,4 @@
+metric,value
+reconfigurable_lut_overhead_vs_int8_pct,-80
+optimized_fmax_improvement_pct,
+optimized_total_power_change_pct,0

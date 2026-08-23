@@ -1,0 +1,6 @@
+architecture,clock_period_ns,wns_ns,tns_ns,data_path_delay_ns,estimated_fmax_mhz,latency_cycles,macs_per_cycle,throughput_macs_per_second
+mac_int8,10,7.175,0,2.803,353.982301,1,1,353982300.884956
+mac_int16,10,,,1.429,,1,1,
+reconfigurable_mac_top,10,,,1.491,,1,1,
+reconfigurable_mac_optimized,10,8.396,0,1.638,623.441397,2,1,623441396.508729
+mac_array_4lane,10,4.624,0,5.401,186.011905,1,4,744047619.047619
